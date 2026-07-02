@@ -1,64 +1,214 @@
-🚀 AI Resume Analyzer & Ranker
-A comprehensive dashboard designed to streamline the recruitment process using AI-driven resume parsing and ranking.
+# 🚀 AI Resume Analyzer & Ranker
 
-📋 Table of Contents
-Project Overview
+> **An AI-powered Resume Analyzer and Candidate Ranking System built using Python, Streamlit, FAISS, and Sentence Transformers to automate resume screening and candidate ranking.**
 
-Features
+---
 
-Tech Stack
+# 📌 Project Overview
 
-Installation Guide
+The **AI Resume Analyzer & Ranker** is an intelligent recruitment solution that helps recruiters and HR professionals efficiently screen, analyze, and rank resumes based on a given Job Description (JD).
 
-How to Run
+Using **Natural Language Processing (NLP)** and **semantic similarity search**, the system evaluates candidate profiles, calculates match scores, and ranks applicants according to their relevance.
 
-Project Structure
+This significantly reduces manual effort while improving hiring accuracy and efficiency.
 
-🎯 Project Overview
-This tool helps recruiters analyze candidate resumes against job descriptions. It uses FAISS for vector-based similarity search to ensure you find the most qualified candidates quickly.
+---
 
-✨ Features
-Intelligent Ranking: Automatically calculates match percentages based on skills and experience.
+# ✨ Features
 
-KPI Dashboard: Visual summaries of candidate match quality (Excellent, Good, Average).
+### 🤖 AI-Powered Resume Ranking
+- Semantic resume matching using Sentence Transformers
+- FAISS vector similarity search
+- Automatic match percentage calculation
+- Intelligent candidate ranking
 
-Detailed View: Easy navigation to candidate profiles and resume insights.
+### 📄 Resume Parsing
+- Supports PDF resumes
+- Supports DOCX resumes
+- Extracts candidate information
+- Batch resume processing
 
-Customizable: Easily extendable to support different resume formats.
+### 📊 Interactive Dashboard
+- Total resumes uploaded
+- Average match score
+- Top-ranked candidates
+- KPI cards
+- Charts and visual insights
 
-🛠️ Tech Stack
-Frontend: Streamlit
+### 🔍 Candidate Insights
+- Resume preview
+- Match percentage
+- Skill comparison
+- Experience analysis
+- Individual candidate details
 
-Backend Logic: Python, Pandas
+### ⚡ Fast & Efficient
+- AI-powered resume analysis
+- High-speed vector search
+- Optimized processing pipeline
 
-AI/ML: Sentence-Transformers, FAISS
+---
 
-Data Processing: PyMuPDF, python-docx
+# 🛠️ Tech Stack
 
-⚙️ Installation Guide
-1. Setup Virtual Environment
-Bash
-# Open terminal in project folder
-python -m venv venv
+| **Category** | **Technology** |
+|--------------|----------------|
+| **Frontend** | Streamlit |
+| **Backend** | Python |
+| **Data Processing** | Pandas |
+| **AI / NLP** | Sentence Transformers |
+| **Vector Search** | FAISS |
+| **PDF Parser** | PyMuPDF |
+| **DOCX Parser** | python-docx |
 
-# Activate (Windows)
-.\venv\Scripts\Activate.ps1
-2. Install Dependencies
-Bash
-pip install -r requirements.txt
-🚀 How to Run
-Once installed, execute the application using the following command:
+---
 
-Bash
-python -m streamlit run frontend/app.py
-📂 Project Structure
-Plaintext
-ai-resume-analyzer/
-├── backend/            # Business logic (Ranking, Scoring)
+# 📂 Project Structure
+
+```text
+AI-Resume-Analyzer/
+│
+├── backend/
 │   ├── ranking.py
-│   └── scoring.py
-├── frontend/           # Streamlit UI files
+│   ├── scoring.py
+│   └── parser.py
+│
+├── frontend/
 │   ├── app.py
 │   └── pages/
-├── requirements.txt    # Project dependencies
-└── README.md
+│
+├── data/
+├── assets/
+├── requirements.txt
+├── README.md
+└── LICENSE
+```
+
+---
+
+# ⚙️ Installation
+
+## **1️⃣ Clone the Repository**
+
+```bash
+git clone https://github.com/your-username/AI-Resume-Analyzer.git
+
+cd AI-Resume-Analyzer
+```
+
+## **2️⃣ Create a Virtual Environment**
+
+### Windows
+
+```bash
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## **3️⃣ Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🚀 Run the Application
+
+```bash
+python -m streamlit run frontend/app.py
+```
+
+or
+
+```bash
+streamlit run frontend/app.py
+```
+
+---
+
+# 📈 Workflow
+
+1. Upload resumes (PDF/DOCX)
+2. Enter the Job Description
+3. AI extracts resume information
+4. Generate resume embeddings
+5. Compare resumes with JD using FAISS
+6. Calculate similarity scores
+7. Rank candidates automatically
+8. View insights through the dashboard
+
+---
+
+# 📸 Screenshots
+
+> Add screenshots of your application here.
+
+```md
+![Dashboard](assets/dashboard.png)
+
+![Candidate Ranking](assets/ranking.png)
+
+![Resume Analysis](assets/analysis.png)
+```
+
+---
+
+# 🎯 Future Enhancements
+
+- ATS Compatibility Score
+- AI Interview Question Generator
+- Resume Keyword Highlighting
+- Skill Gap Analysis
+- Recruiter Login System
+- Export Reports (PDF & Excel)
+- Database Integration
+- Cloud Deployment
+- Email Notifications
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+```bash
+git checkout -b feature-name
+git commit -m "Added new feature"
+git push origin feature-name
+```
+
+Then open a Pull Request.
+
+---
+
+# 📝 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👩‍💻 Author
+
+## **Nayanika Bhadouria**
+
+**B.Tech (Computer Science & Engineering)**
+
+AI | Machine Learning | Software Development | Open Source
+
+- 💼 LinkedIn: https://linkedin.com/in/your-profile
+- 🐦 Twitter/X: https://twitter.com/your-profile
+- 🌐 Portfolio: https://your-portfolio.com
+
+---
+
+# ⭐ Support
+
+If you found this project helpful, **please give it a ⭐ Star on GitHub!**

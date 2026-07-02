@@ -6,6 +6,8 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import streamlit as st
+import pandas as pd
+import io
 from components import card_open, card_close
 from backend.services.report_service import generate_ranking_csv, generate_pipeline_csv, generate_analytics_csv
 
@@ -35,13 +37,16 @@ def render(t: dict):
             unsafe_allow_html=True,
         )
         csv_bytes = generate_ranking_csv(company_id, jd_id)
+        df=pd.read_csv(io.BytesIO(csv_bytes))
+        excel_buffer = io.BytesIO()
+        df.to_excel(excel_buffer, index=False, engine='openpyxl')   
         st.download_button(
-            "📥 Download Ranking CSV",
-            data=csv_bytes,
-            file_name="candidate_ranking.csv",
-            mime="text/csv",
+            "📥 Download Ranking Excel (XLSX)",
+            data=excel_buffer.getvalue(),
+            file_name="candidate_ranking.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             use_container_width=True,
-            key="dl_ranking",
+            key="dl_ranking_xlsx",
         )
         card_close()
 
